@@ -10,7 +10,7 @@ tags: [meta, image, grarec, gemini]
 
 # grarec
 
-手書きグラレコ（graphic recording / sketchnote）風の画像を生成する skill。スタイル定義（手書き風・marker on white paper・モノクロ + sky blue アクセント・サムネは文字なし / 詳細は日本語ラベル）を `scripts/grarec.py` に一元化した「正本」。cc-grarec（skills カタログ）や other-use（用途例）の生成ロジックも将来この土台に寄せる。
+手書きグラレコ（graphic recording / sketchnote）風の画像を生成する skill。スタイル定義（手書き風・marker on white paper・モノクロ + sky blue アクセント・サムネは文字なし / 詳細は日本語ラベル）を `scripts/grarec.py` に一元化した「正本」。画像生成が要る他の用途も、この土台に寄せて共通化できる。
 
 **いつ使う**: 概念やワークフローを手書き風アイコン / 工程図にしたいとき。`/grarec <concept>`、他 skill から画像が要るときの共通土台。
 
@@ -51,4 +51,4 @@ marker on white paper・minimal lines・モノクロ + アクセント 1 色（�
 ## 注意
 
 - 生成画像は出力先（`GRAREC_OUT_DIR`）に保存される。必要に応じて `.gitignore` で除外し commit しない運用を推奨。
-- 既存の `scripts/another-script.py`（cc-grarec）と `other-use` の grarec は今は別実装。将来この `grarec.py` をサブプロセス呼び出しで共通化する（その際 GA モデル id + Vertex も継承させる）。
+- 画像生成を行う他の skill / スクリプトは、この `grarec.py` をサブプロセス呼び出しすることで共通化できる（GA モデル id + Vertex backend をそのまま継承させる）。

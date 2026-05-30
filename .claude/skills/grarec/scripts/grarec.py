@@ -11,8 +11,8 @@
 
 任意の concept/テキストから手書きグラレコ風の正方 PNG を Gemini Image API で
 生成する。スタイル定義（手書き風・monochrome + sky blue accent・サムネは文字なし /
-詳細は日本語ラベル）をここに一元化し、将来 cc-grarec / other-use もこの土台へ
-寄せられるよう、純関数を副作用なしで公開する。
+詳細は日本語ラベル）をここに一元化し、他の用途からも再利用しやすいよう、
+純関数を副作用なしで公開する。
 
 backend は既定 Vertex AI（ADC/IAM・鍵不要）。`GRAREC_BACKEND=gemini-api` または
 `GOOGLE_API_KEY` 明示で Gemini API キー方式（Secret Manager 経由）に切替。
@@ -40,7 +40,6 @@ import re
 import sys
 from pathlib import Path
 
-# .claude/skills/grarec/scripts/grarec.py → parents[4] が repo root
 # 出力先は GRAREC_OUT_DIR で指定（既定はカレント配下 grarec-out/）
 DEFAULT_OUTPUT_DIR = Path(os.environ.get("GRAREC_OUT_DIR", "grarec-out")).expanduser()
 
