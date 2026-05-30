@@ -15,6 +15,7 @@ skill は一覧があっても、第三者には「**いつ使うのか**」が�
 | [`grarec`](.claude/skills/grarec/) | 概念やワークフローを手書きグラレコ（sketchnote）風の画像にしたいとき。記事のアイキャッチ、資料、skill 一覧の視覚化など。Gemini の画像生成（Nano Banana Pro）を使う |
 | [`fact-check`](.claude/skills/fact-check/) | ブログ記事や技術文書を公開する前に、URL・技術的主張・コマンド・コードスニペットの正確性を検証したいとき |
 | [`sync-skills`](.claude/skills/sync-skills/) | 複数リポに散らばった Claude Code skill を 1 つのカタログ（`skills-catalog.md`）に集約して棚卸ししたいとき |
+| [`check-updates`](.claude/skills/check-updates/) | Claude エコシステムの最新アップデートを確認して、あなたのリポジトリへの採用候補を提案してほしいとき |
 
 少しずつ増やしていく。
 

@@ -16,6 +16,8 @@ import { EmptyState } from "@/components/ui/empty-state";
 import type { Skill } from "@/lib/skills";
 
 const BUILD_ID = process.env.NEXT_PUBLIC_BUILD_ID || "dev";
+const REPO_SKILL_BASE =
+  "https://github.com/y-mae-dev/skills/blob/master/.claude/skills";
 
 /** グラレコサムネ。PNG 不在時は Terminal アイコンにフォールバック。 */
 function SkillThumbnailButton({
@@ -154,9 +156,20 @@ export function SkillsCatalog({ skills }: { skills: Skill[] }) {
               <SkillThumbnailButton skill={skill} onOpenDetail={setDetailSkill} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-baseline gap-2 flex-wrap mb-1.5">
-                  <code className="text-base font-mono font-semibold text-foreground">
-                    /{skill.name}
-                  </code>
+                  <a
+                    href={`${REPO_SKILL_BASE}/${skill.name}/SKILL.md`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline underline-offset-2"
+                    title="SKILL.md を開く"
+                  >
+                    <code className="text-base font-mono font-semibold text-foreground">
+                      /{skill.name}
+                    </code>
+                  </a>
+                  <span className="text-xs text-muted-foreground/70">
+                    SKILL.md ↗
+                  </span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   {skill.description}
