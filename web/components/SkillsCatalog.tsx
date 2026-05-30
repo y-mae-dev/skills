@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { ImageIcon, Search, Terminal } from "lucide-react";
+import { ExternalLink, ImageIcon, Search, Terminal } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -160,16 +160,17 @@ export function SkillsCatalog({ skills }: { skills: Skill[] }) {
                     href={`${REPO_SKILL_BASE}/${skill.name}/SKILL.md`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline underline-offset-2"
                     title="SKILL.md を開く"
+                    className="group/skill inline-flex items-baseline gap-1.5 underline-offset-2 hover:underline decoration-sky-500/40"
                   >
-                    <code className="text-base font-mono font-semibold text-foreground">
+                    <code className="text-base font-mono font-semibold text-foreground transition-colors group-hover/skill:text-sky-600 dark:group-hover/skill:text-sky-400">
                       /{skill.name}
                     </code>
+                    <span className="inline-flex items-center gap-0.5 text-xs text-muted-foreground/70">
+                      SKILL.md
+                      <ExternalLink className="h-3 w-3" />
+                    </span>
                   </a>
-                  <span className="text-xs text-muted-foreground/70">
-                    SKILL.md ↗
-                  </span>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                   {skill.description}
