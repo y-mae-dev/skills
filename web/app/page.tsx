@@ -1,6 +1,8 @@
-import { Terminal } from "lucide-react";
+import { Terminal, Github } from "lucide-react";
 import { getSkills } from "@/lib/skills";
 import { SkillsCatalog } from "@/components/SkillsCatalog";
+
+const REPO_URL = "https://github.com/y-mae-dev/skills";
 
 export default function Home() {
   const skills = getSkills();
@@ -18,6 +20,18 @@ export default function Home() {
         </p>
       </header>
       <SkillsCatalog skills={skills} />
+
+      <footer className="mt-12 border-t border-border pt-5 text-xs text-muted-foreground">
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 underline-offset-2 hover:text-foreground hover:underline"
+        >
+          <Github className="h-3.5 w-3.5" />
+          y-mae-dev/skills
+        </a>
+      </footer>
     </main>
   );
 }
