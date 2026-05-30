@@ -8,7 +8,7 @@ skill は一覧があっても、第三者には「**いつ使うのか**」が�
 
 このリポは、各 skill の「いつ使うか」を README とグラレコ（手書き風の図）で見えるようにすることを目的にする。視覚と言葉の両方で、使いどころの当たりがつくようにしている。
 
-## 収録 skill（いつ使うか）
+## Skill一覧とユースケース
 
 | skill | いつ使うか |
 |---|---|
@@ -17,12 +17,6 @@ skill は一覧があっても、第三者には「**いつ使うのか**」が�
 | [`sync-skills`](.claude/skills/sync-skills/) | 複数リポに散らばった Claude Code skill を 1 つのカタログ（`skills-catalog.md`）に集約して棚卸ししたいとき |
 | [`check-updates`](.claude/skills/check-updates/) | Claude エコシステムの最新アップデートを確認して、あなたのリポジトリへの採用候補を提案してほしいとき |
 
-少しずつ増やしていく。
-
 ## 使い方
 
 各 skill ディレクトリを自分の環境の `.claude/skills/<name>/` にコピーする（または Claude Code から参照する）。skill 固有の前提（API キー・外部 CLI 等）は各 `SKILL.md` を参照。
-
-## メモ
-
-- `grarec` は画像生成 backend に Vertex AI（既定・鍵レス）または Gemini API キーを使う。GCP project 等は環境変数（`GOOGLE_CLOUD_PROJECT` 等）で指定する。
