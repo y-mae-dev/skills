@@ -17,7 +17,7 @@ import type { Skill } from "@/lib/skills";
 
 const BUILD_ID = process.env.NEXT_PUBLIC_BUILD_ID || "dev";
 const REPO_SKILL_BASE =
-  "https://github.com/y-mae-dev/skills/blob/master/.claude/skills";
+  "https://github.com/y-mae-dev/skills/blob/main/.claude/skills";
 
 /** グラレコサムネ。PNG 不在時は Terminal アイコンにフォールバック。 */
 function SkillThumbnailButton({
