@@ -16,7 +16,7 @@ export default function Home() {
           </h1>
         </div>
         <p className="mt-1 text-sm text-muted-foreground">
-          再利用できる Claude Code skill のカタログ。「いつ使うか」をグラレコと説明で見せる。
+          Claude Code skill のユースケースを、手書きグラレコで見える化する。
         </p>
       </header>
       <SkillsCatalog skills={skills} />
