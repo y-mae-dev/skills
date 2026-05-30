@@ -1,4 +1,4 @@
-import { Terminal, Github } from "lucide-react";
+import { Terminal } from "lucide-react";
 import { getSkills } from "@/lib/skills";
 import { SkillsCatalog } from "@/components/SkillsCatalog";
 
@@ -28,8 +28,8 @@ export default function Home() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 underline-offset-2 hover:text-foreground hover:underline"
         >
-          <Github className="h-3.5 w-3.5" />
-          y-mae-dev/skills
+          <Terminal className="h-3.5 w-3.5" />
+          GitHub: y-mae-dev/skills
         </a>
       </footer>
     </main>
