@@ -1,37 +1,25 @@
-import { Terminal } from "lucide-react";
-import { getSkills } from "@/lib/skills";
-import { SkillsCatalog } from "@/components/SkillsCatalog";
+import type { Metadata } from "next";
+import { HomePage } from "@/components/HomePage";
+import { getDict } from "@/lib/i18n";
 
-const REPO_URL = "https://github.com/y-mae-dev/skills";
+const t = getDict("ja");
 
-export default function Home() {
-  const skills = getSkills();
-  return (
-    <main className="mx-auto w-full max-w-3xl px-4 py-10">
-      <header className="mb-6">
-        <div className="flex items-center gap-2">
-          <Terminal className="h-6 w-6" />
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Claude Code Skills
-          </h1>
-        </div>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Claude Code skill のユースケースを、手書きグラレコで見える化する。
-        </p>
-      </header>
-      <SkillsCatalog skills={skills} />
+export const metadata: Metadata = {
+  title: t.siteTitle,
+  description: t.metaDescription,
+  alternates: {
+    canonical: "/",
+    languages: { ja: "/", en: "/en", "x-default": "/" },
+  },
+  openGraph: {
+    type: "website",
+    locale: t.ogLocale,
+    url: "/",
+    title: t.siteTitle,
+    description: t.metaDescription,
+  },
+};
 
-      <footer className="mt-12 border-t border-border pt-5 text-xs text-muted-foreground">
-        <a
-          href={REPO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 underline-offset-2 hover:text-foreground hover:underline"
-        >
-          <Terminal className="h-3.5 w-3.5" />
-          GitHub: y-mae-dev/skills
-        </a>
-      </footer>
-    </main>
-  );
+export default function Page() {
+  return <HomePage lang="ja" />;
 }
