@@ -1,11 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { SKILL_DESCRIPTIONS_EN } from "@/lib/i18n/skill-descriptions-en";
 
 export type Skill = {
   name: string;
   description: string;
-  /** SKILL.md frontmatter の description_en。未設定なら undefined。 */
+  /** 英訳（サイドカー skill-descriptions-en）。未登録なら undefined。 */
   descriptionEn?: string;
   /** "[a, b, c]" 形式（コンポーネントの parseTags と整合） */
   tags: string;
@@ -28,13 +29,10 @@ function parseSkill(dir: string): SkillDetail | null {
   const mdPath = path.join(SKILLS_ROOT, dir, "SKILL.md");
   if (!fs.existsSync(mdPath)) return null;
   const { data, content } = matter(fs.readFileSync(mdPath, "utf8"));
-  const descriptionEn = data.description_en
-    ? normalize(data.description_en)
-    : undefined;
   return {
     name: String(data.name ?? dir),
     description: normalize(data.description),
-    descriptionEn,
+    descriptionEn: SKILL_DESCRIPTIONS_EN[dir],
     tags: Array.isArray(data.tags) ? `[${data.tags.join(", ")}]` : "",
     content: content.trim(),
   };
