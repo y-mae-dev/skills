@@ -1,16 +1,20 @@
+**English** | [日本語](./README.ja.md)
+
 # skills
 
-再利用できる Claude Code skill のカタログ。各 skill の「いつ使うか」をグラレコ（手書き風の図）と説明で見せる。
+A catalog of reusable Claude Code skills. Each skill shows *when to use it* through a hand-drawn sketchnote and a short description.
 
-## Skill一覧とユースケース
+🔗 https://cc-skills.maeno.dev
 
-| skill | いつ使うか |
+## Skills & use cases
+
+| skill | When to use |
 |---|---|
-| [`grarec`](.claude/skills/grarec/) | 概念やワークフローを手書きグラレコ（sketchnote）風の画像にしたいとき。記事のアイキャッチ、資料、skill 一覧の視覚化など。Gemini の画像生成（Nano Banana Pro）を使う |
-| [`fact-check`](.claude/skills/fact-check/) | ブログ記事や技術文書を公開する前に、URL・技術的主張・コマンド・コードスニペットの正確性を検証したいとき |
-| [`sync-skills`](.claude/skills/sync-skills/) | 複数リポに散らばった Claude Code skill を 1 つのカタログ（`skills-catalog.md`）に集約して棚卸ししたいとき |
-| [`check-updates`](.claude/skills/check-updates/) | Claude エコシステムの最新アップデートを確認して、あなたのリポジトリへの採用候補を提案してほしいとき |
+| [`grarec`](.claude/skills/grarec/) | When you want to turn a concept or workflow into a hand-drawn graphic-recording (sketchnote) style image — article thumbnails, slides, or visualizing a skill catalog. Uses Gemini image generation (Nano Banana Pro). |
+| [`fact-check`](.claude/skills/fact-check/) | When you want to verify the accuracy of URLs, technical claims, commands, and code snippets before publishing a blog post or technical document. |
+| [`sync-skills`](.claude/skills/sync-skills/) | When you want to collect Claude Code skills scattered across multiple repos into a single catalog (`skills-catalog.md`) and take inventory. |
+| [`check-updates`](.claude/skills/check-updates/) | When you want to check the latest updates across the Claude ecosystem and get adoption candidates proposed for your repository. |
 
-## 使い方
+## Usage
 
-各 skill ディレクトリを自分の環境の `.claude/skills/<name>/` にコピーする（または Claude Code から参照する）。skill 固有の前提（API キー・外部 CLI 等）は各 `SKILL.md` を参照。
+Copy each skill directory into your environment's `.claude/skills/<name>/` (or reference it from Claude Code). For skill-specific prerequisites (API keys, external CLIs, etc.), see each `SKILL.md`.
