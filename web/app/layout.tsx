@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cc-skills.maeno.dev"),
   title: "Claude Code Skills",
   description: "再利用できる Claude Code skill のカタログ",
 };
