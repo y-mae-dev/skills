@@ -12,4 +12,6 @@ export const SKILL_DESCRIPTIONS_EN: Record<string, string> = {
     "Collect Claude Code skills across multiple repositories and generate or update a single skills-catalog.md. Use it to take inventory of your skills and keep the catalog current.",
   "check-updates":
     "Check the latest updates across the Claude ecosystem via web search and propose adoption candidates for your repository. Use it to catch up on new features and changes.",
+  "activity-report":
+    "Generate a cross-repository activity report from the GitHub API — collect commits, issues, and PRs across all your repos and summarize them per repository. Handy for daily logs and weekly or monthly retrospectives.",
 };
