@@ -14,6 +14,7 @@
 | [`fact-check`](.claude/skills/fact-check/) | ブログ記事や技術文書を公開する前に、URL・技術的主張・コマンド・コードスニペットの正確性を検証したいとき |
 | [`sync-skills`](.claude/skills/sync-skills/) | 複数リポに散らばった Claude Code skill を 1 つのカタログ（`skills-catalog.md`）に集約して棚卸ししたいとき |
 | [`check-updates`](.claude/skills/check-updates/) | Claude エコシステムの最新アップデートを確認して、あなたのリポジトリへの採用候補を提案してほしいとき |
+| [`activity-report`](.claude/skills/activity-report/) | GitHub API からリポジトリ横断の活動レポート（コミット・Issue・PR をリポ別に集計）が欲しいとき。日次ログや週次・月次の振り返りの素材集めにも |
 
 ## 使い方
 
